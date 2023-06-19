@@ -1,0 +1,9 @@
+docx
+pandas
+pdf2image
+pdfminer
+PyPDF2
+pytesseract
+python_docx
+pywin32
+pymongo
