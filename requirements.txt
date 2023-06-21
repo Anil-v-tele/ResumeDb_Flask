@@ -5,5 +5,5 @@ pdfminer
 PyPDF2
 pytesseract
 python_docx
-pywin32
+pywin32==302
 pymongo
