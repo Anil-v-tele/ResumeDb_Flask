@@ -3,6 +3,7 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
         libatlas-base-dev gfortran nginx supervisor
 RUN pip3 install uwsgi
+RUN python -m pip install --upgrade pip
 COPY ./requirements.txt /project/requirements.txt
 RUN pip3 install -r /project/requirements.txt
 RUN useradd --no-create-home nginx
