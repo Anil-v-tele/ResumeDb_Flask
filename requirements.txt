@@ -11,4 +11,4 @@ Requests==2.31.0
 Werkzeug==2.3.6
 WTForms==3.0.1
 python-docx
-pywin32==223
+pywin32==301
