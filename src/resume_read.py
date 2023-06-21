@@ -1,8 +1,7 @@
 import docx
 from docx.api import Document as Docs
 import os
-import win32com
-from win32com import client
+# import win32com
 from PyPDF2 import PdfReader
 from io import StringIO
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -67,26 +66,26 @@ def docxReader(filePath,link):
 # print(json.dumps(data_dct,indent=4))
 
 
-def docReader(filePath,link):
-    file_name = file_text = ""
-    try:
-        if not filePath.split(".")[1] == "doc":
-            print(f'-- File format passed is not correct this function only take .doc extensions')
-            return        
-        file_name = os.path.basename(filePath)    
-        word = win32com.client.Dispatch("Word.Application")
-        word.Visible = False        
-        _ = word.Documents.Open(filePath)        
-        doc = word.ActiveDocument
-        file_text = doc.Range().text    
-        doc.Close()
-        word.Quit()
-    except Exception as e:
-        print(e)    
-    if file_name and filePath and file_text:
-        return {"FileName":file_name,"FilePath":filePath,"FileText":file_text,"Link":link}
-    else:
-        return
+# def docReader(filePath,link):
+#     file_name = file_text = ""
+#     try:
+#         if not filePath.split(".")[1] == "doc":
+#             print(f'-- File format passed is not correct this function only take .doc extensions')
+#             return        
+#         file_name = os.path.basename(filePath)    
+#         word = win32com.client.Dispatch("Word.Application")
+#         word.Visible = False        
+#         _ = word.Documents.Open(filePath)        
+#         doc = word.ActiveDocument
+#         file_text = doc.Range().text    
+#         doc.Close()
+#         word.Quit()
+#     except Exception as e:
+#         print(e)    
+#     if file_name and filePath and file_text:
+#         return {"FileName":file_name,"FilePath":filePath,"FileText":file_text,"Link":link}
+#     else:
+#         return
 
 # doctext = docReader("C:/Users/vedan/Downloads/Salman_Khalid.doc")
 # print(doctext)
