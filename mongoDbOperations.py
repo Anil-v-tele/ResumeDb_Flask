@@ -2,7 +2,8 @@ from pymongo import MongoClient
 from urllib.parse import unquote
 
 
-dbclient = MongoClient("mongodb://localhost:27017/")
+# dbclient = MongoClient("mongodb://localhost:27017/")
+dbclient = MongoClient('mongo', 27017)
 
 resume_db = dbclient['vedantaResume']
 resume_coll = resume_db['Resume']

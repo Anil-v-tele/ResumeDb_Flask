@@ -9,7 +9,7 @@ from mongoDbOperations import insertToMongoDB
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
-app.config['UPLOAD_FOLDER'] = 'static/files'
+app.config['UPLOAD_FOLDER'] = '/home/vedanta/AllResume'
 
 class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
