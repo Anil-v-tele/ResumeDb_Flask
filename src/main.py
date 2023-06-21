@@ -4,8 +4,8 @@ from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 import os
 from wtforms.validators import InputRequired
-from resume_read import parse_resume
-from mongoDbOperations import insertToMongoDB
+from src.resume_read import parse_resume
+from src.mongoDbOperations import insertToMongoDB
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
